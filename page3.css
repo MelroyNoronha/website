@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+body{
+  display:inline-block;
+  width:100%;
+  margin:0px;
+}
+
+.bck_grnd{
+  background-color:#332F2F;
+  height:17vh;
+}
+
+.icon_color{
+  color:#0081F2;
+}
+
+#design{
+  color:#0081F2;
+  font-family: 'Dancing Script','cursive', 'monospace';
+  left: ;
+  top: ;
+}
+
+#code{
+  color:#0081F2;
+  font-family: 'Droid Sans', 'sans-serif';
+  left: ;
+  top: ;
+}
+
+#home-button{
+  
+  cursor:pointer;
+}
+#behance{
+  left: ;
+  top: ;
+}
+#github{
+  left: ;
+  top: ;
+}
+
+a:link{
+  color:inherit;
+}
+a:active{
+  color:inherit;
+}
+a:visited{
+  color:inherit;
+}
+a:hover{
+  color:inherit;
+}
