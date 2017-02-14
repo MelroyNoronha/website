@@ -7,39 +7,56 @@ body{
 }
 
 .bck_grnd{
+  font-size:7vw;
   background-color:#332F2F;
-  height:17vh;
+  height:7vh;
 }
 
 .icon_color{
   color:#0081F2;
 }
+#home-button{
+  cursor:pointer;
+  font-size: 6vw;
+}
 
 #design{
   color:#0081F2;
   font-family: 'Dancing Script','cursive', 'monospace';
-  left: ;
-  top: ;
+  position:absolute;
+  left:17vw;
+  top:65vh;
+  cursor:pointer;
+}
+#behance{
+  font-size:10vw;
+  position:absolute;
+  left:20vw;
+  top:35vh;
+  cursor:pointer;
 }
 
 #code{
   color:#0081F2;
   font-family: 'Droid Sans', 'sans-serif';
-  left: ;
-  top: ;
-}
-
-#home-button{
-  
+  position:absolute;
+  left:65vw;
+  top:65vh;
   cursor:pointer;
 }
-#behance{
-  left: ;
-  top: ;
-}
+
 #github{
-  left: ;
-  top: ;
+  font-size:10vw;
+  position: absolute;
+  left:70vw;
+  top:35vh;
+  cursor:pointer;
+}
+#plus{
+  position: absolute;
+  left:45vw;
+  top:45vh;
+  cursor:pointer;
 }
 
 a:link{
