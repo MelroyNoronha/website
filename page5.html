@@ -184,9 +184,137 @@ print(t)
 f.close()
 kika=input("press any key to exit")</p>
 
-<h2>5 c</h2><p>d={'t1':10,'t2':5,'t3':25}
+<h2>5c</h2><p>d={'t1':10,'t2':5,'t3':25}
 print(d)
 print("sum:",sum(d.values()))
 kika=input("press any key to exit")</p>
+    
+    <h2>5a</h2><p>import operator
+d={1:22,3:13,4:8,2:11,0:27}
+print(d)
+t=sorted(d.items(),key=operator.itemgetter(0))
+print('In ascending order by value:',t)
+t=sorted(d.items(),key=operator.itemgetter(0),reverse=True)
+print('In descending order by value:',t)
+kika=input("press any key to exit")</p>
+    
+    <h2>find common</h2><p>def find_common(st1,st2):
+    res=False
+    for x in st1:
+        for y in st2:
+            if x==y:
+                res=True
+                return res
+print(find_common([4,6,8,10,12],[5,7,8,10,11]))
+print(find_common([3,5,7,9,11],[2,4,6,8]))
+kika=input("press any key to exit")</p>
+    
+    <h2>PANGRAM</h2><p>import string,sys
+def ispangram(str1,alphabet=string.ascii_lowercase):
+    alphabet=set(alphabet)
+    return alphabet<=set(str1.lower())
+print(ispangram("the quick brown fox jumps over the lazy dog"))
+kika=input("press any key to exit")</p>
+    
+    <h2>HISTOGRAM</h2><p>def histogram(items):
+    for n in items:
+        output= ''
+        times=n
+    while(times>0):
+        output += '*'
+        times=times-1
+    print(output)
+histogram([4,9,7])
+kika=input("press any key to exit")</p>
+    
+    <h2>1E</h2><p>def armnum(num):
+    sum=0
+    temp=num
+    while temp>0:
+        digit=temp%10
+        sum+=digit**3
+        temp//=10
+    if num==sum:
+        print(num,"is an amrstrong number")
+    else:
+        print(num,"is not an armstrong number")
+
+def palnum(num):
+    sum=0
+    temp=num
+    while num!=0:
+        rem=num%10
+        sum=rem+sum*10
+        num=num//10
+    if temp==sum:
+        print(temp,"is a palindrom number")
+    else:
+        print(temp,"is not a palindrom number")
+num=int(input("enter any number:"))
+armnum(num)
+palnum(num)
+kika=input("press any key to exit")
+</p>
+    
+    <h2>revnum</h2><p>def revnum(num):
+    sum=0
+    while num!=0:
+        rem=num%10
+        sum=rem+sum*10
+        num=num//10
+    print("reverse num:%d"%sum)
+num=int(input("enter any number:"))
+revnum(num)
+kika=input("press any key to exit")</p>
+    
+    <h2>6a file functions</h2><p>f = open('6Atest.txt','r')
+message = f.read()
+print(message)
+
+</p>
+    <h2>5b dictionaries</h2><p>print('given dictionary')
+print('dic1={1:10,2:20}')
+print('dic2={3:30,4:40}')
+print('dic3={4:40,5:50}')
+dic1={1:10,2:20}
+dic2={3:30,4:40}
+dic3={4:40,5:50}
+concat ={}
+concat.update(dic1)
+concat.update(dic2)
+concat.update(dic3)
+print ("after concatenation    :",concat)
+</p>
+    <h2>Clone a list</h2><p>print('cloning a list')
+
+
+a = [str(x) for x in input("enter the elements in list\t").split()]
+b=a
+print ("the elements in original list are \t",a)
+print("the elements in cloned list are \t",b)
+kika=input('press any key to exit')
+
+</p>
+    <h2>Less thana 5</h2>
+    <p>print("less than 5")
+list=[int(x) for x in input("enter the list of numbers ").split()]
+print("the list of numbers are \t",list)
+print("the elements less than 5 are as follows:-")
+for x in list:
+	
+	if x<5:
+ 		print("\t",x)
+kika=input('enter any key to exit')
+
+</p>
+      
+    <h2>remove specific elements from list</h2><p>print("removing 0th 2nd 4th 5th elements from a list")
+list1 = [str(a) for a in input("enter elements in list\t").split()]
+print ('list before altering',list1)
+del (list1[0],list1[2],list1[4],list1[5])
+print ("After deleting value at index 0,2,4,5 : ",list1)
+kika=input("press any key to exit")</p>
+   
+    
   </body>
 </html>
