@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+    <h2>9a</h2>
+    <p>
+      import tkinter as tk
+win=tk.TK()
+win.title("Practical9A")
+
+def redClick():
+    label.config(text="Helvetica Font")
+    label.config(bg="red")
+    label.config(font=("Helvetica",16))
+
+def greenClick():
+    label.config(text="Cambria Font")
+    label.config(bg="green")
+    label.config(font=("Cambria",18))
+
+def yellowClick():
+    label.config(text="Arial Font")
+    label.config(bg="yellow")
+    label.config(font=("Calbari",14))
+
+label=tk.Label(win,text="practical9A",bg="white")
+label.pack()
+B1=tk.Button(win,text="RED Click",relief='raised',command=redClick)
+B1.pack(side="left")
+B2=tk.Button(win,text="Green Click",relief='raised',command=greenClick)
+B2.pack(side="left")
+B3=tk.Button(win,text="Yellow Click",relief='raised',command=yellowClick)
+B3.pack(side="left")
+win.mainloop()
+kika=input("press any key to exit")
+    </p>
+    
+    <h2>8b</h2>
+    <p>try:
+    num=int(input("enter the number"))
+    re=100/num
+except(ValueError,ZeroDivisionError):
+    print("Something is wrong")
+else:
+    print("result is",re)
+kika=input("press any key to exit")</p>
+
+<h2>Geometry</h2><p>#geometry.py
+import math
+
+def sphereArea(r):
+    return 4*math.pi*r**2
+
+def spherevolume(r):
+    return 4*math.pi*r**3/3
+
+def sphereMetrics(r):
+    return sphereArea(r),spherevolume(r)
+
+def circleArea(r):
+    return math.pi*r**2
+
+def squareArea(x):
+    return x**2
+
+#demo.py
+import geomerty
+
+def pointyshapevolume(x,h,square)
+    if square:
+        base=geometry.squareArea(x)
+    else:
+        base=geometry.circleArea(x)
+    return h*base/3.0
+print(dir(geometry))
+print(pointyshapevolume(4,2.6,true))
+print(pointyshapevolume(4,2.6,false))
+kika=input("press any key to exit")
+</p>
+
+<h2>7c</h2><p>class Numbers:
+    MULTIPLIER=3
+
+    def_init_(self,x,y):
+        self.x=x
+        self.y=y
+
+    def add(self):
+        return self.x+self.y
+
+    @classmethod
+    def multiply(cls,a):
+        return cls.MULTIPLIER*a
+
+    @staticmethod
+    def subtract(b,c):
+        return b-c
+
+    @property
+    def value(self):
+        return (self.x,self.y)
+
+    @value.setter
+    def value(self,xy_tuple):
+        self.x,self.y=xy_tuple
+
+    @value.deleter
+    def value(self):
+        del self.x
+        del self.y
+
+T=Number(2,4)
+print(T.add())
+print(T.multiply(2))
+print(Numbers.subtract(4,3))
+kika=input("press any key to exit")class Numbers:
+    MULTIPLIER=3
+
+    def_init_(self,x,y):
+        self.x=x
+        self.y=y
+
+    def add(self):
+        return self.x+self.y
+
+    @classmethod
+    def multiply(cls,a):
+        return cls.MULTIPLIER*a
+
+    @staticmethod
+    def subtract(b,c):
+        return b-c
+
+    @property
+    def value(self):
+        return (self.x,self.y)
+
+    @value.setter
+    def value(self,xy_tuple):
+        self.x,self.y=xy_tuple
+
+    @value.deleter
+    def value(self):
+        del self.x
+        del self.y
+
+T=Number(2,4)
+print(T.add())
+print(T.multiply(2))
+print(Numbers.subtract(4,3))
+kika=input("press any key to exit")</p>
+
+<h2>7b class st</h2><p>class st:
+    def s1(self):
+        print("Base Class")
+class st1(st):
+    def s2(self):
+        print("Derived Class")
+t=st1()
+t.s1()
+t.s2()
+kika=input("press any key to exit")</p>
+
+<h2>7a class student</h2><p>class student:
+    def info(self,studname,studaddr):
+        print("Name:",studname,"Address:",studaddr)
+obj=student()
+obj.info('Veda','Airoli')
+kika=input("press any key to exit")</p>
+
+<h2>6c File functions</h2><p>f=open('abc.txt','r')
+t=f.readlines()
+print(t[-1])
+f.close()
+kika=input("press any key to exit")</p>
+<h2>6b file functions</h2><p>f=open('abc.txt','a+')
+f.write('\nEasy to learn')
+f=open('abc.txt','r')
+t=f.read()
+print(t)
+f.close()
+kika=input("press any key to exit")</p>
+
+<h2>5 c</h2><p>d={'t1':10,'t2':5,'t3':25}
+print(d)
+print("sum:",sum(d.values()))
+kika=input("press any key to exit")</p>
+  </body>
+</html>
