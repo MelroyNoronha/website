@@ -1,5 +1,4 @@
-# Portfolio-site
-### A simple portfolio site hosted using GitHub Pages.
-You can visit the site  [here](https://melroynoronha.github.io/portfolio-site/).
+# This is my website that's hosted using Github Pages.
+You can visit the site  [here](https://melroynoronha.github.io/my-website/).
 
 
