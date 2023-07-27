@@ -9,8 +9,10 @@ TODO
 # testing
 /coverage
 
-# production
+# production and build
 /build
+.next
+out
 
 # misc
 .DS_Store
