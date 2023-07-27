@@ -1,19 +1,22 @@
 {
-  "name": "portfolio-site",
-  "version": "1.0.0",
-  "description": "Melroy Noronha's Portfolio Site",
-  "main": "index.js",
+  "name": "my-website",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MelroyNoronha/Portfolio-site.git"
-  },
-  "author": "Melroy Noronha",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MelroyNoronha/Portfolio-site/issues"
-  },
-  "homepage": "https://github.com/MelroyNoronha/Portfolio-site#readme"
+  "dependencies": {
+    "@types/node": "20.4.5",
+    "@types/react": "18.2.16",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12",
+    "next": "13.4.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.6"
+  }
 }

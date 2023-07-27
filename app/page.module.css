@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.intro {
+  align-items: center;
+  width: 50vw;
+  text-align: center;
+  font-size: larger;
+  line-height: 3.5vh;
+  word-spacing: 0.3vw;
+}
+
+.introLink {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.introLink:active {
+  opacity: 0.5;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.bottomLink {
+  all: unset;
+  text-decoration: underline;
+  font-size: x-large;
+  cursor: pointer;
+}
+.bottomLink:active {
+  opacity: 0.5;
+}
