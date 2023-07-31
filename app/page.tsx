@@ -9,8 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const bottomLinkClassNames = `${styles.link} ${styles.xLargeFont}`;
-
   return (
     <main className={styles.main}>
       <h1>Melroy Noronha</h1>
