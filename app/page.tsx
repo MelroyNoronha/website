@@ -1,9 +1,11 @@
 import Link from 'next/link'
 
 import styles from './page.module.css'
-import {urls} from './constants';
+import {urls} from './constants'
 
 export default function Home() {
+  const bottomLinkClassNames = `${styles.link} ${styles.xLargeFont}`
+
   return (
     <main className={styles.main}>
       <h1>Melroy Noronha</h1>
@@ -15,16 +17,16 @@ export default function Home() {
         </p>
         <p className={styles.intro}>
           I have a deep passion for music and have worked on projects like <br/>
-          <Link className={styles.introLink} href={urls.tronicDisease} target='_blank'>'tronicDisease'</Link>
+          <Link className={styles.link} href={urls.tronicDisease} target='_blank'>'tronicDisease'</Link>
           &nbsp;and&nbsp;
-          <Link className={styles.introLink} href={urls.melAndTheDragon} target="_blank">'Mel and the Dragon'</Link>.
+          <Link className={styles.link} href={urls.melAndTheDragon} target="_blank">'Mel and the Dragon'</Link>.
         </p>
       </div>
 
       <div className={styles.linksContainer}>
-        <Link className={styles.bottomLink} href={urls.github} target="_blank">Github</Link>
-        <Link className={styles.bottomLink} href={urls.blog}>Blog</Link>
-        <Link className={styles.bottomLink} href={urls.linkedIn} target="_blank">LinkedIn</Link>
+        <Link className={bottomLinkClassNames} href={urls.github} target="_blank">Github</Link>
+        <Link className={bottomLinkClassNames} href={urls.blog}>Blog</Link>
+        <Link className={bottomLinkClassNames} href={urls.linkedIn} target="_blank">LinkedIn</Link>
       </div>
     </main>
   )
