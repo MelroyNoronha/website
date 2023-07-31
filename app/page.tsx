@@ -1,7 +1,12 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 import styles from './page.module.css'
 import {urls} from './constants'
+
+export const metadata: Metadata = {
+  title: 'Melroy Noronha'
+}
 
 export default function Home() {
   const bottomLinkClassNames = `${styles.link} ${styles.xLargeFont}`
