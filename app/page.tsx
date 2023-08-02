@@ -9,58 +9,44 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const bottomLinkClassNames = `${styles.link} ${styles.xLargeFont}`;
-
   return (
     <main className={styles.main}>
       <h1>Melroy Noronha</h1>
 
-      <div>
+      <section>
         <p className={styles.intro}>
           I'm a creator at heart. <br />I stumbled into web and app development
           as a university student and turned it into a career.
         </p>
         <p className={styles.intro}>
-          I have a deep passion for music and have worked on projects like{" "}
+          I have a deep passion for music and have worked on projects like
           <br />
-          <Link
-            className={styles.link}
-            href={urls.tronicDisease}
-            target="_blank"
-          >
-            'tronicDisease'
+          <Link href={urls.tronicDisease} target="_blank">
+            tronicDisease
           </Link>
           &nbsp;and&nbsp;
-          <Link
-            className={styles.link}
-            href={urls.melAndTheDragon}
-            target="_blank"
-          >
-            'Mel and the Dragon'
+          <Link href={urls.melAndTheDragon} target="_blank">
+            Mel and the Dragon
           </Link>
           .
         </p>
-      </div>
+      </section>
 
-      <div className={styles.linksContainer}>
-        <Link
-          className={bottomLinkClassNames}
-          href={urls.github}
-          target="_blank"
-        >
+      <section className={styles.linksContainer}>
+        <Link className={styles.xLargeFont} href={urls.github} target="_blank">
           Github
         </Link>
-        <Link className={bottomLinkClassNames} href={urls.blog}>
+        <Link className={styles.xLargeFont} href={urls.blog}>
           Blog
         </Link>
         <Link
-          className={bottomLinkClassNames}
+          className={styles.xLargeFont}
           href={urls.linkedIn}
           target="_blank"
         >
           LinkedIn
         </Link>
-      </div>
+      </section>
     </main>
   );
 }
