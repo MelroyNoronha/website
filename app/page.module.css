@@ -11,18 +11,7 @@
   width: 75vw;
   text-align: center;
   font-size: larger;
-  line-height: 4vh;
   word-spacing: 0.3vw;
-}
-
-.link {
-  all: unset;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.link:active {
-  opacity: 0.5;
 }
 
 .linksContainer {
