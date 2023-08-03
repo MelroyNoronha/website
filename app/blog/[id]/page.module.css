@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.content {
+  font-size: large;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+}
+
 @media (max-width: 600px) {
   .titleSection {
     flex-direction: column;

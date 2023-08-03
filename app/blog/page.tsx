@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { Metadata } from "next";
 
 import { getBlogsIndexData } from "@/lib/blogs";
 
 import { URLS } from "@/constants";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Melroy Noronha's Blogs",
+};
 
 interface BlogIndexItem {
   id: string;
