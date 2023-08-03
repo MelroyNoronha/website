@@ -1,0 +1,14 @@
+.blogIndex {
+  all: unset;
+}
+
+.blogIndexListItem {
+  all: unset;
+  display: block;
+  text-decoration: none;
+  margin: 5vh 0;
+}
+
+.blogIndexLink {
+  font-size: x-large;
+}
