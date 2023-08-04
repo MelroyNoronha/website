@@ -28,13 +28,13 @@ export default async function Blog({ params }: BlogParams) {
 
   return (
     <main>
-      <section className={styles.titleSection}>
-        <h2>{blogData.title}</h2>
+      <header className={styles.titleSection}>
+        <h1>{blogData.title}</h1>
         <Date dateString={blogData.date} />
-      </section>
+      </header>
       <hr />
       <section className={styles.content}>
-        <article dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />
       </section>
     </main>
   );

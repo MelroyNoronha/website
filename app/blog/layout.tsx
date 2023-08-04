@@ -5,5 +5,5 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section className={styles.blogLayout}>{children}</section>;
+  return <div className={styles.blogLayout}>{children}</div>;
 }
