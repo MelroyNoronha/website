@@ -57,3 +57,5 @@ A few more styling tweaks and a bit of code formatting, to keep things neat and 
 I deployed the app using [Vercel](https://vercel.com/), which makes Next.js app deployment super easy.
 
 And that's the story of how this blog was born.
+
+<img alt="image" src="https://github.com/MelroyNoronha/my-website/assets/16273203/9bcfc2bb-b3e3-48dd-85e5-80afcb6e065e">
