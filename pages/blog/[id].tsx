@@ -21,13 +21,21 @@ export async function getStaticPaths() {
   };
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({
+  params,
+}: {
+  params: { id: string };
+}) => {
   const blogData = await getBlogData(params.id);
 
   return { props: { blogData } };
 };
 
-export default function Blog({ blogData }) {
+export default function Blog({
+  blogData,
+}: {
+  blogData: { title: string; date: string; contentHtml: string };
+}) {
   return (
     <main>
       <header className={styles.titleSection}>

@@ -30,7 +30,11 @@ export const getStaticProps = async () => {
   return { props: { allBlogsIndexData } };
 };
 
-export default function BlogsIndex({ allBlogsIndexData }) {
+export default function BlogsIndex({
+  allBlogsIndexData,
+}: {
+  allBlogsIndexData: [];
+}) {
   return (
     <ul className={styles.blogIndex}>
       {allBlogsIndexData.map(({ id, title }: BlogIndexItem) => (
