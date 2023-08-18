@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
-import { getBlogData } from "@/lib/blogs";
+import { getBlogData, getAllPostIds } from "@/lib/blogs";
 import Date from "@/components/date";
 
-import styles from "./page.module.css";
+import styles from "./id.module.css";
 
 interface GenerateMetadataProps {
   params: { id: string };
@@ -13,19 +13,21 @@ interface BlogParams {
   params: { id: string };
 }
 
-export async function generateMetadata({
-  params,
-}: GenerateMetadataProps): Promise<Metadata> {
-  const blogData = await getBlogData(params.id);
-
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
   return {
-    title: blogData.title,
+    paths,
+    fallback: false,
   };
 }
 
-export default async function Blog({ params }: BlogParams) {
+export const getStaticProps: GetStaticProps<{}> = async ({ params }) => {
   const blogData = await getBlogData(params.id);
 
+  return { props: { blogData } };
+};
+
+export default function Blog({ blogData }) {
   return (
     <main>
       <header className={styles.titleSection}>

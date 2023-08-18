@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { getBlogsIndexData } from "@/lib/blogs";
 
 import { URLS } from "@/constants";
-import styles from "./page.module.css";
+import styles from "./index.module.css";
 
 export const metadata: Metadata = {
   title: "Melroy Noronha's Blogs",
@@ -25,9 +25,12 @@ function BlogIndexItem({ id, title }: BlogIndexItem) {
   );
 }
 
-export default function BlogsIndex() {
+export const getStaticProps: GetStaticProps<{}> = async () => {
   const allBlogsIndexData = getBlogsIndexData();
+  return { props: { allBlogsIndexData } };
+};
 
+export default function BlogsIndex({ allBlogsIndexData }) {
   return (
     <ul className={styles.blogIndex}>
       {allBlogsIndexData.map(({ id, title }: BlogIndexItem) => (
