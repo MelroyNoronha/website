@@ -4,7 +4,7 @@ import { getBlogData, getAllPostIds } from "@/lib/blogs";
 import Date from "@/components/date";
 import Layout from "@/components/blog/layout";
 
-import styles from "./id.module.css";
+import styles from "./index.module.css";
 
 interface BlogParams {
   params: { id: string };
