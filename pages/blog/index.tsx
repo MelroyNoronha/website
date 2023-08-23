@@ -1,14 +1,10 @@
 import Link from "next/link";
-import { Metadata } from "next";
 
 import { getBlogsIndexData } from "@/lib/blogs";
-
+import Layout from "@/components/blog/layout";
 import { URLS } from "@/constants";
-import styles from "./index.module.css";
 
-export const metadata: Metadata = {
-  title: "Melroy Noronha's Blogs",
-};
+import styles from "./index.module.css";
 
 interface BlogIndexItem {
   id: string;
@@ -36,10 +32,12 @@ export default function BlogsIndex({
   allBlogsIndexData: [];
 }) {
   return (
-    <ul className={styles.blogIndex}>
-      {allBlogsIndexData.map(({ id, title }: BlogIndexItem) => (
-        <BlogIndexItem id={id} title={title} key={id} />
-      ))}
-    </ul>
+    <Layout>
+      <ul className={styles.blogIndex}>
+        {allBlogsIndexData.map(({ id, title }: BlogIndexItem) => (
+          <BlogIndexItem id={id} title={title} key={id} />
+        ))}
+      </ul>
+    </Layout>
   );
 }
