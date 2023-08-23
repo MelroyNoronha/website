@@ -1,18 +1,17 @@
 import Link from "next/link";
-import { Metadata } from "next";
+import Head from "next/head";
 
 import { URLS } from "@/constants";
 import Layout from "@/components/layout";
 
 import styles from "./index.module.css";
 
-export const metadata: Metadata = {
-  title: "Melroy Noronha",
-};
-
 export default function Page() {
   return (
     <Layout>
+      <Head>
+        <title>Melroy Noronha</title>
+      </Head>
       <main className={styles.main}>
         <h1>Melroy Noronha</h1>
 
