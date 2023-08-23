@@ -1,0 +1,9 @@
+.link {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:active {
+  opacity: 0.5;
+}

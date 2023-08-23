@@ -11,6 +11,14 @@
   letter-spacing: 0.5px;
 }
 
+.content > div > img {
+  border: 2px solid black;
+  padding: 2px;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 600px) {
   .titleSection {
     flex-direction: column;

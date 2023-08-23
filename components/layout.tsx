@@ -1,4 +1,3 @@
-import "./layout.module.css";
 import { Glory } from "next/font/google";
 
 const inter = Glory({ subsets: ["latin"], weight: "400" });

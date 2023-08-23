@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Head from "next/head";
 
 import { getBlogsIndexData } from "@/lib/blogs";
 import Layout from "@/components/blog/layout";
+import StyledLink from "@/components/StyledLink";
 import { URLS } from "@/constants";
 
 import styles from "./index.module.css";
@@ -15,9 +15,9 @@ interface BlogIndexItem {
 function BlogIndexItem({ id, title }: BlogIndexItem) {
   return (
     <li className={styles.blogIndexListItem}>
-      <Link href={`${URLS.blog}/${id}`} className={styles.blogIndexLink}>
+      <StyledLink href={`${URLS.blog}/${id}`} className={styles.blogIndexLink}>
         {title}
-      </Link>
+      </StyledLink>
     </li>
   );
 }

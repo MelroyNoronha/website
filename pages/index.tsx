@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Head from "next/head";
 
 import { URLS } from "@/constants";
 import Layout from "@/components/layout";
+import StyledLink from "@/components/StyledLink";
 
 import styles from "./index.module.css";
 
@@ -23,35 +23,35 @@ export default function Page() {
           <p className={styles.intro}>
             I have a deep passion for music and have worked on projects like
             <br />
-            <Link href={URLS.tronicDisease} target="_blank">
+            <StyledLink href={URLS.tronicDisease} target="_blank">
               tronicDisease
-            </Link>
+            </StyledLink>
             &nbsp;and&nbsp;
-            <Link href={URLS.melAndTheDragon} target="_blank">
+            <StyledLink href={URLS.melAndTheDragon} target="_blank">
               Mel and the Dragon
-            </Link>
+            </StyledLink>
             .
           </p>
         </section>
 
         <section className={styles.linksContainer}>
-          <Link
+          <StyledLink
             className={styles.xLargeFont}
             href={URLS.github}
             target="_blank"
           >
             Github
-          </Link>
-          <Link className={styles.xLargeFont} href={URLS.blog}>
+          </StyledLink>
+          <StyledLink className={styles.xLargeFont} href={URLS.blog}>
             Blog
-          </Link>
-          <Link
+          </StyledLink>
+          <StyledLink
             className={styles.xLargeFont}
             href={URLS.linkedIn}
             target="_blank"
           >
             LinkedIn
-          </Link>
+          </StyledLink>
         </section>
       </main>
     </Layout>
