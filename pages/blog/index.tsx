@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { getBlogsIndexData } from "@/lib/blogs";
-import Layout from "@/components/blog/layout";
+import Layout from "@/components/BlogLayout";
 import StyledLink from "@/components/StyledLink";
 import { URLS } from "@/constants";
 

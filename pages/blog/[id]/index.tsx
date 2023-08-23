@@ -1,8 +1,8 @@
 import Head from "next/head";
 
 import { getBlogData, getAllBlogIds } from "@/lib/blogs";
-import Date from "@/components/date";
-import Layout from "@/components/blog/layout";
+import Date from "@/components/Date";
+import Layout from "@/components/BlogLayout";
 
 import styles from "./index.module.css";
 

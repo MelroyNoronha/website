@@ -1,4 +1,4 @@
-import RootLayout from "../layout";
+import RootLayout from "../RootLayout";
 import styles from "./layout.module.css";
 
 export default function BlogLayout({

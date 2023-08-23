@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { URLS } from "@/constants";
-import Layout from "@/components/layout";
+import Layout from "@/components/RootLayout";
 import StyledLink from "@/components/StyledLink";
 
 import styles from "./index.module.css";
