@@ -57,7 +57,7 @@ export async function getBlogData(id: string): Promise<{
   };
 }
 
-export function getAllPostIds() {
+export function getAllBlogIds() {
   const fileNames = fs.readdirSync(BLOGS_DIRECTORY);
 
   return fileNames.map((fileName) => {

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { getBlogData, getAllPostIds } from "@/lib/blogs";
+import { getBlogData, getAllBlogIds } from "@/lib/blogs";
 import Date from "@/components/date";
 import Layout from "@/components/blog/layout";
 
@@ -10,8 +10,14 @@ interface BlogParams {
   params: { id: string };
 }
 
+interface BlogData {
+  title: string;
+  date: string;
+  contentHtml: string;
+}
+
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = getAllBlogIds();
   return {
     paths,
     fallback: false,
@@ -24,11 +30,7 @@ export const getStaticProps = async ({ params }: BlogParams) => {
   return { props: { blogData } };
 };
 
-export default function Blog({
-  blogData,
-}: {
-  blogData: { title: string; date: string; contentHtml: string };
-}) {
+export default function Blog({ blogData }: { blogData: BlogData }) {
   const { title, date, contentHtml } = blogData;
 
   return (
