@@ -2,10 +2,13 @@ import fs from "fs";
 import path from "path";
 import { remark } from "remark";
 import remarkHtml from "remark-html";
+import remarkRehype from "remark-rehype";
+import rehypeExternalLinks from "rehype-external-links";
+import rehypeSanitize from "rehype-sanitize";
+import rehypeStringify from "rehype-stringify";
 import matter from "gray-matter";
 
 import { BLOGS_DIRECTORY } from "@/constants";
-import purifyHTML from "@/lib/purifyHtml";
 
 const getFileContents = (fileName: string) => {
   const fullPath = path.join(BLOGS_DIRECTORY, fileName);
@@ -42,10 +45,17 @@ export async function getBlogData(id: string): Promise<{
   const matterResult = matter(getFileContents(`${id}.md`));
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
-    .use(remarkHtml, { sanitize: false }) // we will sanitize using purifyHTML later
+    .use(remarkHtml)
+    .use(remarkRehype) // so we can use rehype plugins to modify the HTML output
+    .use(rehypeExternalLinks, {
+      target: "_blank",
+      rel: ["noopener", "noreferrer", "nofollow"],
+    }) // we want links in the blog to open in a new tab while avoiding XSS attacks
+    .use(rehypeSanitize) // protect against XSS attacks
+    .use(rehypeStringify)
     .process(matterResult.content);
 
-  const contentHtml = purifyHTML(processedContent.toString());
+  const contentHtml = processedContent.toString();
 
   const { title, date } = matterResult.data;
 

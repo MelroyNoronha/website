@@ -58,4 +58,4 @@ I deployed the app using [Vercel](https://vercel.com/), which makes Next.js app 
 
 And that's the story of how this blog was born.
 
-<img alt="image" src="https://github.com/MelroyNoronha/my-website/assets/16273203/373892d9-7b48-4b21-9728-deb7cd4567d6">
+![](https://github.com/MelroyNoronha/my-website/assets/16273203/373892d9-7b48-4b21-9728-deb7cd4567d6)
