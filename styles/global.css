@@ -1,0 +1,20 @@
+:root {
+  --dark: #332F2F;
+  --light: #fff;
+}
+
+html,
+body {
+  --fg: var(--dark);
+  --bg: var(--light);
+  color: var(--fg);
+  background: var(--bg);
+}
+
+[data-theme='dark'],
+[data-theme='dark'] body {
+  --fg: var(--light);
+  --bg: var(--dark);
+  color: var(--fg);
+  background: var(--bg);
+}

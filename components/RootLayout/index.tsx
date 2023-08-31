@@ -1,5 +1,7 @@
 import { Glory } from "next/font/google";
 
+import ToggleTheme from "@/components/ToggleTheme";
+
 const inter = Glory({ subsets: ["latin"], weight: "400" });
 
 export default function RootLayout({
@@ -9,6 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <div lang="en" className={inter.className}>
+      <ToggleTheme />
       {children}
     </div>
   );
