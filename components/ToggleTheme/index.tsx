@@ -26,10 +26,22 @@ export default function ToggleTheme() {
     if (resolvedTheme === THEMES.LIGHT) setTheme(THEMES.DARK);
   };
 
+  const dynamicButtonProps =
+    resolvedTheme === THEMES.DARK
+      ? {
+          title: `Switch to light mode`,
+          icon: <Sun />,
+        }
+      : { title: `Switch to dark mode`, icon: <Moon /> };
+
   return (
     <div className={styles.toggleContainer}>
-      <button className={styles.toggleButton} onClick={handleThemeToggleClick}>
-        {resolvedTheme === THEMES.DARK ? <Sun /> : <Moon />}
+      <button
+        className={styles.toggleButton}
+        onClick={handleThemeToggleClick}
+        title={dynamicButtonProps.title}
+      >
+        {dynamicButtonProps.icon}
       </button>
     </div>
   );
