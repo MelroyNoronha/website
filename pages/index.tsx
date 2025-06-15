@@ -17,11 +17,16 @@ export default function Page() {
 
         <section>
           <p className={styles.intro}>
-            I'm a creator at heart. <br />I stumbled into web and app
-            development as a university student and turned it into a career.
+            I'm a creator at heart. <br />
+            I stumbled into web and app development as a university student and
+            turned it into a career in software engineering.
+            <br />
+            I've created beautiful software for multiple early and late stage
+            startups.
           </p>
           <p className={styles.intro}>
-            I have a deep passion for music and have worked on projects like
+            When I'm not coding, I'm usually listening to music or working on
+            music projects like
             <br />
             <StyledLink href={URLS.tronicDisease} target="_blank">
               tronicDisease
